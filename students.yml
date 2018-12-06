@@ -1,0 +1,18 @@
+---
+StudentsDetails: 
+  - name: shravan
+    phno: 8989879890
+    address: 
+     - doorno: 56
+     - pin: 500072
+  - name: shravan
+    phno: 8989879896
+    address:
+      - doorno: 56
+      - pin: 500072
+  - name: manasa
+    phno: 8989879891
+    address: 
+      - doorno: 56
+      - pin: 500072
+      
