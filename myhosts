@@ -1,8 +1,14 @@
-
+172.31.8.9
+172.31.8.10
 
 [webservers]
 172.31.44.198
 172.31.29.107
+
+[webservers:vars]
+webserverpackonubuntu=apache2
+webserverpackonredhat=httpd
+
 
 [applicationservers]
 172.31.26.25
