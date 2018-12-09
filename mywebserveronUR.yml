@@ -1,5 +1,5 @@
 ---
-- hosts: all
+- hosts: webservers
   become: yes
   tasks:
   - name:  install webserver on Ubuntu(apache2)
