@@ -1,0 +1,13 @@
+---
+hosts: webservers
+become: yes
+vars:
+  var1: shravan
+  vrr2: manasan
+tasks:
+- name: display playbook vars vrr1
+  debug:
+    msg: "{{vrr2}}"
+- name: diplay group vars
+  debug:
+    msg: "{{mycompname}}"
