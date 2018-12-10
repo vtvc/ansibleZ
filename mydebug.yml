@@ -1,0 +1,13 @@
+---
+- hosts: redhatos
+  become: yes
+  tasks: 
+  - name: execute linux commands 
+    command: hostname -f
+    register: myresult
+  - name: display the myresult
+    debug:
+      msg: "{{myresult}}"
+
+
+      
