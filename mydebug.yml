@@ -2,12 +2,23 @@
 - hosts: redhatos
   become: yes
   tasks: 
-  - name: execute linux commands 
+  - name: execute linux commands 1
     command: hostname -f
     register: myresult
   - name: display the myresult
     debug:
       msg: "{{myresult}}"
+  - name: install git 2
+    yum: 
+      name: git
+      state: present
+    when: myresult.stderr ==""
+    
+  - name: install tree 3
+    yum:
+      name: tree
+      state: present
+    when: myresult.stderr !=""
 
 
       
