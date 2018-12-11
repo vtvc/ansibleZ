@@ -12,4 +12,14 @@
     service:
       name: httpd
       state: started
+
+  - name: copy index file into all nodes
+    template:
+      src: myindex.j2
+      dest: /var/www/html/index.html
+      
+  - name: restart the webserver 
+    service: 
+      name: httpd
+      state: restarted
   
