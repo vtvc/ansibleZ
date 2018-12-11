@@ -7,18 +7,17 @@
     yum:
       name: httpd
       state: present
-
-  - name: start the webserver
-    service:
-      name: httpd
-      state: started
-
+    notify: restarthttpd
+    
   - name: copy index file into all nodes
     template:
       src: myindex.j2
       dest: /var/www/html/index.html
-      
-  - name: restart the webserver 
+    notify: restarthttpd
+
+
+  handlers:
+  - name: restarthttpd 
     service: 
       name: httpd
       state: restarted
