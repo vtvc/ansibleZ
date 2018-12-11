@@ -1,0 +1,5 @@
+---
+  - name: create a file on all nodes
+    file:
+      path: /home/maha/maha.txt
+      state: touch
