@@ -1,2 +1,9 @@
 ---
 # tasks file for mytomdeploy
+
+- name: deploy java application on tomcat application server
+  get_url:
+    url: https://s3.amazonaws.com/maha4iac/mahaLogin.war
+    dest: /usr/share/tomcat/webapps/
+    force_basic_auth: yes
+  notify: restarttomcat
